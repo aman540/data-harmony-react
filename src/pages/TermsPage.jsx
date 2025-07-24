@@ -58,7 +58,7 @@ const TermsPage = () => {
     term.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  const handleTermClick = (id: string) => {
+  const handleTermClick = (id) => {
     navigate(`/terms/${id}`);
   };
 

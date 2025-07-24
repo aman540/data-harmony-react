@@ -2,12 +2,7 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { GitBranch } from "lucide-react";
 
-interface SideNavProps {
-  activeItem: string;
-  onItemClick: (item: string) => void;
-}
-
-const SideNav = ({ activeItem, onItemClick }: SideNavProps) => {
+const SideNav = ({ activeItem, onItemClick }) => {
   const navItems = [
     {
       id: "relationships",

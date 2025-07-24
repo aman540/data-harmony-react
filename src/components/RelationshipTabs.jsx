@@ -29,12 +29,7 @@ const mockAiRecommendations = [
   { id: "term8", confidence: 0.73, reason: "Credit scoring often linked to customer profiles" }
 ];
 
-interface RelationshipTabsProps {
-  entityType: "ERObject" | "Term";
-  entityId: string;
-}
-
-const RelationshipTabs = ({ entityType, entityId }: RelationshipTabsProps) => {
+const RelationshipTabs = ({ entityType, entityId }) => {
   const [relatedSearchTerm, setRelatedSearchTerm] = useState("");
   const [unrelatedSearchTerm, setUnrelatedSearchTerm] = useState("");
   const [showRecommendations, setShowRecommendations] = useState(false);
@@ -65,17 +60,17 @@ const RelationshipTabs = ({ entityType, entityId }: RelationshipTabsProps) => {
 
   const displayUnrelatedTerms = showRecommendations ? aiRecommendedTerms : filteredUnrelatedTerms;
 
-  const handleUnrelate = (termId: string) => {
+  const handleUnrelate = (termId) => {
     console.log(`Unrelating term ${termId} from ${entityType} ${entityId}`);
     // In real app, this would make an API call
   };
 
-  const handleRelate = (termId: string) => {
+  const handleRelate = (termId) => {
     console.log(`Relating term ${termId} to ${entityType} ${entityId}`);
     // In real app, this would make an API call
   };
 
-  const getRecommendationData = (termId: string) => {
+  const getRecommendationData = (termId) => {
     return mockAiRecommendations.find(rec => rec.id === termId);
   };
 

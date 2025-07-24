@@ -43,7 +43,7 @@ const ERObjectsPage = () => {
     obj.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  const handleObjectClick = (id: string) => {
+  const handleObjectClick = (id) => {
     navigate(`/erobjects/${id}`);
   };
 

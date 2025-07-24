@@ -26,11 +26,11 @@ const mockERObjects = {
 };
 
 const ERObjectDetailPage = () => {
-  const { id } = useParams<{ id: string }>();
+  const { id } = useParams();
   const navigate = useNavigate();
   const [activeView, setActiveView] = useState("overview");
 
-  const erObject = id ? mockERObjects[id as keyof typeof mockERObjects] : null;
+  const erObject = id ? mockERObjects[id] : null;
 
   if (!erObject) {
     return (

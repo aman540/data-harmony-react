@@ -31,11 +31,11 @@ const mockTerms = {
 };
 
 const TermDetailPage = () => {
-  const { id } = useParams<{ id: string }>();
+  const { id } = useParams();
   const navigate = useNavigate();
   const [activeView, setActiveView] = useState("overview");
 
-  const term = id ? mockTerms[id as keyof typeof mockTerms] : null;
+  const term = id ? mockTerms[id] : null;
 
   if (!term) {
     return (
